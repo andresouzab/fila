@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila</title>
+</head>
+<body>
+<!-- FORMULARIO PARA ADICIONAR E RETIRAR ALGUÉM DA FILA -->
+
+    <form action="">
+    <input type="text" name="" id="nome">
+    <input type="button" value="Inserir" onclick="inserirNaFila()"></input>
+    <input type="button" value="Retirar" onclick="retirarDaFila()"></input>
+    </form>
+    <h2>Fila de Pessoas:</h2>
+    <h2 id="fila"></h2>
+
+    <br>
+    <br>
+    <br>
+    <h2>Fila de Pessoas Atendidas:</h2>
+    <h2 id="pAtendidas"></h2>
+    
+    <script>
+//CRIAÇÃO FILA
+    let fila = document.getElementById("fila");
+    let filaPessoas = [];
+    let pessoasAtendidas = [];
+
+//FUNÇÃO PARA INSERIR E RETIRAR DA FILA 
+    
+    function inserirNaFila(){
+        filaPessoas.push(document.getElementById("nome").value);
+        fila.innerHTML = filaPessoas;
+    
+}
+    function retirarDaFila(){
+        pessoasAtendidas.push(filaPessoas[0])
+        filaPessoas.shift(document.getElementById("nome").value);
+        fila.innerHTML = filaPessoas;
+        pAtendidas.innerHTML = pessoasAtendidas;
+}
+
+// estrutura para controle de uma fila simples
+// let filaPessoas = []
+// INSERIR ITENS FILA
+   // filaPessoas.push("André");
+   // filaPessoas.push("João");
+   // filaPessoas.push("Roberto");
+   // filaPessoas.push("Amanda");
+    
+// IMPRIMIR A FILA
+   // console.log(filaPessoas);
+// REMOVER UMA PESSOA DA FILA
+
+   // filaPessoas.shift();
+   // console.log(filaPessoas);
+//PRIMEIRA PESSOA DA FILA
+    //console.log(filaPessoas[0]);
+    //</script>
+    
+</body>
+</html>
